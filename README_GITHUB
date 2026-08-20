@@ -1,0 +1,14 @@
+KRD Camera Pro — GitHub Actions Build
+Project Android siap di-upload ke GitHub. Setiap push ke `main`/`master`, pull request, atau manual `workflow_dispatch` akan menjalankan GitHub Actions dan menghasilkan APK debug sebagai artifact.
+Cara pakai
+Buat repository baru di GitHub, misalnya `KRD-Camera-Pro`.
+Upload seluruh isi folder project ini ke repository.
+Pastikan folder `.github/workflows/android-apk.yml` ikut ter-upload.
+Buka tab Actions di repository.
+Jalankan Build KRD Camera Pro APK.
+Setelah selesai, buka workflow run tersebut dan download artifact KRD-Camera-Pro-debug.
+Catatan
+Workflow menggunakan JDK 17, sesuai kebutuhan AGP 8.x.
+Workflow menggunakan Gradle 8.11.1.
+APK yang dihasilkan adalah debug APK dan cocok untuk pengujian/sideload.
+Untuk rilis Play Store, buat signing key dan workflow release terpisah; jangan menyimpan keystore/password di repository.
